@@ -2,6 +2,31 @@
   &-pictures {
     background-color: $color-primary;
     grid-column: full-start / col-end 4;
+    background-image: linear-gradient(
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url(./../img/back.jpg);
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  &-image-1 {
+    width: 100%;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    box-shadow: 0 2rem 5rem rgba(black, 0.2);
+  }
+
+  &-image-2 {
+    width: 115%;
+    grid-row: 4 / 6;
+    grid-column: 4 / -1;
+    z-index: 1;
+    box-shadow: 0 3rem 6rem rgba(black, 0.3);
   }
 
   &-content {

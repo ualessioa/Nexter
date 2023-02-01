@@ -105,7 +105,25 @@ body {
 
 .story-pictures {
   background-color: #c69963;
-  grid-column: full-start / col-end 4; }
+  grid-column: full-start / col-end 4;
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(./../img/back.jpg);
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr); }
+
+.story-image-1 {
+  width: 100%;
+  grid-row: 2 / 6;
+  grid-column: 2 / 6;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+
+.story-image-2 {
+  width: 115%;
+  grid-row: 4 / 6;
+  grid-column: 4 / -1;
+  z-index: 1;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3); }
 
 .story-content {
   display: flex;
@@ -121,8 +139,61 @@ body {
   margin-bottom: 4rem; }
 
 .homes {
-  background-color: #101d2c;
-  grid-column: middle-start / middle-end; }
+  grid-column: middle-start / middle-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 3.5rem; }
+  .home-image {
+    width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 1/2;
+    z-index: 1; }
+  .home-icon {
+    fill: #c69963;
+    height: 2.5rem;
+    width: 2.5rem;
+    grid-column: 2 / 3;
+    grid-row: 1/ 2;
+    justify-self: end;
+    margin: 1rem;
+    z-index: 2; }
+  .home-name {
+    grid-column: 1 / span 2;
+    grid-row: 1/2;
+    align-self: end;
+    justify-self: center;
+    z-index: 2;
+    transform: translateY(50%);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #101d2c;
+    font-weight: 400;
+    color: #fff;
+    width: 80%;
+    justify-self: center; }
+  .home-btn {
+    grid-column: 1 / span 2; }
+  .home-location, .home-rooms {
+    margin-top: 2rem; }
+  .home-location, .home-rooms, .home-area, .home-price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem; }
+    .home-location svg, .home-rooms svg, .home-area svg, .home-price svg {
+      fill: #c69963;
+      height: 2rem;
+      width: 2rem; }
 
 .gallery {
   background-color: #54483a;
