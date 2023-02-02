@@ -3,7 +3,15 @@
 
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: $bp-lg) {
+    grid-row: sidebar-start / sidebar-end;
+    grid-column: 1 / -1;
+    justify-content: end;
+    align-items: center;
+  }
 }
 
 .nav-btn {
@@ -12,8 +20,12 @@
 
   background-color: #fff;
   height: 2px;
-  width: 60%;
+  width: 3.6rem;
   margin-top: 4rem;
+  @media screen and (max-width: $bp-lg) {
+    margin-right: 4rem;
+    margin-top: 0;
+  }
 
   &::after,
   &::before {

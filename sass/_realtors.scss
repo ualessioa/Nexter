@@ -8,12 +8,24 @@
   row-gap: 2rem;
   justify-items: center;
 
+  @media screen and (max-width: $bp-lg) {
+    grid-column: full-start / -1;
+  }
+
   &-list {
     display: grid;
     align-items: center;
     grid-template-columns: min-content max-content;
     column-gap: 2rem;
     row-gap: 5vh;
+
+    @media screen and (max-width: $bp-lg) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media screen and (max-width: $bp-sm) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &-img {
